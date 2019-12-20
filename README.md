@@ -130,6 +130,14 @@ To add a new configuration for another version of Maya:
 	+ export MAYAVER=2011		(this is the maya version number, eg 8.5)
 	+ export MAYAVERs=2011		(this is the string version of the Maya version, so Maya 8.5 would be 85)
 
++ commands to compile for Maya 2019
+
+export DEVKIT_LOCATION="/sw/pkg/maya/2019/maya2019/devkit"
+
+cmake -H. -Bbuild -G "Unix Makefiles"
+
+cmake --build build/
+
 ## Packaging for Windows
 
 + We build to a setup executable
