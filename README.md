@@ -132,7 +132,21 @@ To add a new configuration for another version of Maya:
 
 + commands to compile for Maya 2019
 
+export MAYA_VERSION="2019"
+
 export DEVKIT_LOCATION="/sw/pkg/maya/2019/maya2019/devkit"
+
+cmake -H. -Bbuild -G "Unix Makefiles"
+
+cmake --build build/
+
++ commands to compile for Maya 2020
+
+export MAYA_VERSION="2020"
+
+export CC="/sw/pkg/gcc/6.3.1/bin/gcc"
+
+export DEVKIT_LOCATION="/sw/pkg/maya/2020/maya2020/devkit"
 
 cmake -H. -Bbuild -G "Unix Makefiles"
 
@@ -151,3 +165,9 @@ NOTE: If the installer fails to run, it may be because using a mapped drive
 ## Packaging for OSX and Linux
 
 + There is no setup, simply ZIP up all the files in the module folder to an appropriatly named ZIP file.
++ The module folder must contain the Maya version. Eg UVAutoRatioPro2020
+
+
+## To Launch in Maya
+
+UVAutoRatioProUI
