@@ -18,7 +18,7 @@ cmake_minimum_required(VERSION 2.8)
 include($ENV{DEVKIT_LOCATION}/cmake/pluginEntry.cmake)
 
 # specify project name
-set(PROJECT_NAME UVAutoRatioPro)
+set(PROJECT_NAME UVAutoRatioPro$ENV{MAYA_VERSION})
 
 
 # set SOURCE_FILES
